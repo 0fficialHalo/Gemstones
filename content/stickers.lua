@@ -195,11 +195,11 @@ Gemstones.GemSlot{
         if card.area ~= G.jokers then card.ability.perma_x_chips = card.ability.perma_x_chips - self.config.x_chips end
     end,
     calculate = function(self, card, context)
-        if card.area == G.jokers then
-            if context.joker_main and not context.before and not context.after then
-                SMODS.eval_this(card, {
+        if context.cardarea == G.jokers or context.cardarea == G.play then
+            if context.joker_main or context.main_scoring then
+                return ({
                     message = localize{type='variable',key='a_xchips',vars={self.config.x_chips},colour = G.C.CHIPS},
-                    Xchip_mod = self.config.x_chips
+                    x_chips = card.ability.x_chips
                 })
             end
         end
