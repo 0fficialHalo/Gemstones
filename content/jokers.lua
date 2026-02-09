@@ -77,7 +77,7 @@ SMODS.Joker{
     end,
 
     calculate = function(self, card, context)
-        if context.cardarea == G.jokers and not context.before and not context.after then
+        if context.joker_main then
             if card.ability.gem_slot_tally > 0 then
                 return {
                     message = localize{type='variable',key='a_xmult',vars={1 + (card.ability.extra.xmod_increase * card.ability.gem_slot_tally)}},

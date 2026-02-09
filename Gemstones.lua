@@ -25,6 +25,21 @@ Gemstones.GemSlot = SMODS.Sticker:extend{
     prefix_config = { key = false },
     joker_compat = true,
     card_compat = true,
+	process_loc_text = function(self)
+		SMODS.process_loc_text(G.localization.descriptions.Other, self.key, self.loc_txt)
+		SMODS.process_loc_text(G.localization.misc.labels, self.key, self.loc_txt, 'label')
+
+		local key = self.key
+		G.E_MANAGER:add_event(Event({ --Gotta do this in an event because process_loc_text gets called before localization tables are fully populated??
+			blocking = false,
+			blockable = false,
+			func = function ()
+				if not G.localization.misc.labels.gemslot then return false end
+				G.localization.misc.labels[key] = G.localization.misc.labels.gemslot
+				return true
+			end
+		}))
+	end,
 
 	draw = function(self, card) --don't draw shine
 		G.shared_stickers[self.key].role.draw_major = card

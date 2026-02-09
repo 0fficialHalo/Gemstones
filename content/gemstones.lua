@@ -96,7 +96,8 @@ Gemstones.GemstoneConsumable{
     },
 
     loc_vars = function(self, info_queue)
-        info_queue[#info_queue + 1] = { key = self.config.sticker_id, set = "Other", vars = { G.GAME.probabilities.normal or 1, self.config.level_up_odds } }
+        local luck, odds = SMODS.get_probability_vars(self, 1, self.config.level_up_odds, 'gem_amber_desc', false)
+        info_queue[#info_queue + 1] = { key = self.config.sticker_id, set = "Other", vars = { luck, odds } }
         return { vars = { self.config.max_highlighted } }
     end
 }
@@ -225,7 +226,8 @@ Gemstones.GemstoneConsumable{
     },
 
     loc_vars = function(self, info_queue)
-        info_queue[#info_queue + 1] = { key = self.config.sticker_id, set = "Other", vars = { G.GAME.probabilities.normal or 1, self.config.odds } }
+        local luck, odds = SMODS.get_probability_vars(self, 1, self.config.odds, 'gem_emerald_desc', false)
+        info_queue[#info_queue + 1] = { key = self.config.sticker_id, set = "Other", vars = { luck, odds } }
         return { vars = { self.config.max_highlighted } }
     end,
 }
@@ -286,7 +288,8 @@ Gemstones.GemstoneConsumable{
     },
 
     loc_vars = function(self, info_queue)
-        info_queue[#info_queue + 1] = { key = self.config.sticker_id, set = "Other", vars = { G.GAME.probabilities.normal or 1, self.config.chance, self.config.retriggers } }
+        local luck, odds = SMODS.get_probability_vars(self, 1, self.config.chance, 'gem_adamite_desc', false)
+        info_queue[#info_queue + 1] = { key = self.config.sticker_id, set = "Other", vars = { luck, odds, self.config.retriggers } }
         return { vars = { self.config.max_highlighted } }
     end
 }

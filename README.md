@@ -4,8 +4,8 @@ Gemstones is a Balatro mod that adds a new unique card modifier: **Gem Slots**! 
 ![image](https://github.com/0fficialHalo/Gemstones/blob/main/assets/GitHub/GemSlots_Preview.png?raw=true)
 
 ## How to install?
-1. Click [here](www.github.com/0fficialHalo/Gemstones/releases/latest) to go to the latest release
+1. Click [here](https://www.github.com/wingedcatgirl/Gemstones/releases/latest) to go to the latest release
+  - Alternately, click [here](https://github.com/wingedcatgirl/Gemstones/archive/refs/heads/main.zip) to get the latest WIP commit.
 2. Scroll down and click on `Gemstones.zip` to download the latest release
-3. Click [here](https://github.com/MathIsFun0/Talisman/releases/latest) to get the latest release of Talisman
-4. Extract the `Gemstones` folder and `Talisman` folder in your downloads into your Mods folder (`%AppData%/Roaming/Balatro/Mods` for Windows)
-5. Done! If you have any problems, feel free to ask for help in the server!
+3. Extract the `Gemstones` folder in your downloads into your Mods folder (`%AppData%/Roaming/Balatro/Mods` for Windows)
+4. Done! If you have any problems, feel free to ask for help in the server!
