@@ -94,7 +94,7 @@ function Gemstones.get_area_slot_tally(area, unique_only, ignore_list)
 			if unique_only then found[k] = true end
         end end
     end
-
+  
 	return slot_tally, found
 end
 

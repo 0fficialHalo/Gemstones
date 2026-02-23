@@ -106,7 +106,7 @@ Gemstones.GemSlot{
         return { vars = { luck, odds } }
     end,
     calculate = function(self, card, context)
-        if (
+            if (
                 (context.cardarea == G.play and context.main_scoring)
                 or (context.cardarea == G.jokers and context.before)
                 )
